@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishal Pritam Chowdhury - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <canvas id="particle-canvas"></canvas>
+        <div class="gradient-overlay"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        
+        <!-- Blinking Binary Background -->
+        <div class="binary-background">
+            <div class="binary-column" style="left: 5%; animation-delay: 0s;">1010101010101010</div>
+            <div class="binary-column" style="left: 15%; animation-delay: 0.5s;">0101010101010101</div>
+            <div class="binary-column" style="left: 25%; animation-delay: 1s;">1100110011001100</div>
+            <div class="binary-column" style="left: 35%; animation-delay: 1.5s;">0011001100110011</div>
+            <div class="binary-column" style="left: 45%; animation-delay: 2s;">1111000011110000</div>
+            <div class="binary-column" style="left: 55%; animation-delay: 2.5s;">0000111100001111</div>
+            <div class="binary-column" style="left: 65%; animation-delay: 3s;">1010101010101010</div>
+            <div class="binary-column" style="left: 75%; animation-delay: 3.5s;">0101010101010101</div>
+            <div class="binary-column" style="left: 85%; animation-delay: 4s;">1100110011001100</div>
+            <div class="binary-column" style="left: 95%; animation-delay: 4.5s;">0011001100110011</div>
+        </div>
+    </div>
+
+    <!-- Mouse Follower -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <!-- Water Ripple Container -->
+        <div class="ripple-container"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-greeting">Hi, I am Bishal,</h1>
+                    <h2 class="hero-title">a passionate Computer Science Student</h2>
+                    <p class="hero-description">
+                        I am a Full stack web developer Passionate about coding, algorithms, and building innovative software solutions. Currently pursuing my degree in Computer Science while developing real-world projects. Dedicated to creating efficient, scalable, and user-friendly applications.
+                    </p>
+                    
+                    <!-- Tech Stack Icons -->
+                    <div class="tech-stack">
+                        <div class="tech-icon" title="HTML5">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-icon" title="CSS3">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-icon" title="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" title="Angular">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon" title="Python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-icon" title="Java">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="tech-icon" title="C Programming">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="tech-icon" title="MongoDB">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-icon" title="Git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/my photo.jpg" alt="Bishal Pritam Chowdhury">
+                <div class="code-snippet code-snippet-1">
+                    <pre><code>function createMagic() {
+  const dreams = [];
+  while (coding) {
+    dreams.push(innovation);
+  }
+  return success;
+}</code></pre>
+                </div>
+                <div class="code-snippet code-snippet-2">
+                    <pre><code>public class Developer {
+  private String passion = "coding";
+  
+  public void buildFuture() {
+    while (learning) {
+      skills.enhance();
+      projects.create();
+    }
+  }
+}</code></pre>
+                </div>
+                <div class="code-snippet code-snippet-3">
+                    <pre><code>import java.util.*;
+
+public class Innovation {
+  public static void main(String[] args) {
+    List&lt;String&gt; technologies = new ArrayList&lt;&gt;();
+    technologies.add("Java");
+    technologies.add("React");
+    System.out.println("Building the future!");
+  }
+}</code></pre>
+                </div>
+                <div class="profile-decoration">
+                    <div class="code-elements">
+                        <div class="code-line">const developer = {</div>
+                        <div class="code-line">  name: 'Bishal',</div>
+                        <div class="code-line">  passion: 'coding'</div>
+                        <div class="code-line">};</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating CS Elements -->
+        <div class="floating-elements">
+            <div class="floating-icon" data-icon="{}">{ }</div>
+            <div class="floating-icon" data-icon="</>">&lt;/&gt;</div>
+            <div class="floating-icon" data-icon="()">()</div>
+            <div class="floating-icon" data-icon="[]">[&nbsp;]</div>
+            <div class="floating-icon" data-icon=";">&nbsp;;</div>
+            <div class="floating-icon" data-icon="#">#</div>
+        </div>
+        
+        <!-- Binary Matrix Effect -->
+        <div class="binary-matrix">
+            <div class="binary-line">01001000 01100001 01100011 01101011 01100101 01110010</div>
+            <div class="binary-line">01000011 01101111 01100100 01100101 01110010</div>
+            <div class="binary-line">01000010 01101001 01110011 01101000 01100001 01101100</div>
+            <div class="binary-line">01000100 01100101 01110110 01100101 01101100 01101111 01110000 01100101 01110010</div>
+            <div class="binary-line">01001000 01100001 01100011 01101011 01100101 01110010</div>
+            <div class="binary-line">01000011 01101111 01100100 01100101 01110010</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Bishal Pritam Chowdhury</h3>
+                    <p>
+                        Hi, I'm Bishal Pritam Chowdhury, a dedicated 3rd year B.Tech CSE student specializing in Artificial Intelligence and Machine Learning (AIML). With a year of hands-on experience as a web developer, I've built a strong foundation in MERN stack, Python, Java, and C—skills I apply daily to innovate and create.
+                    </p>
+                    <p>
+                        My passion lies at the intersection of web development and AI. I've designed and deployed several web apps featuring weather, GPS, and mapping integrations, along with custom AI-powered solutions. I've also trained and utilized both custom and pre-trained models to bring smarter features to life.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, contributing to 
+                        open-source projects, or enjoying a good cup of coffee while planning my next 
+                        creative project.
+                    </p>
+                    <div class="skills">
+                        <h4>Technologies I work with:</h4>
+                        <div class="tech-stack-about">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-angular"></i>
+                                <span>Angular</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-code"></i>
+                                <span>C Programming</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fire"></i>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Firestore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mindmuseai.jpg" alt="MindMuse AI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/GangserX/mindmuseai" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MindMuse AI</h3>
+                        <p>An AI-powered mental health chatbot designed to help users track their emotional well-being and receive guidance through a beautifully crafted, accessible web experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Chatbot</span>
+                            <span class="tech-tag">Mental Health</span>
+                        </div>
+                        <a href="https://github.com/GangserX/mindmuseai" class="btn btn-primary" target="_blank">View GitHub Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/weather_app.jpg" alt="Weather Forecast App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/GangserX/weather-app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Forecast App</h3>
+                        <p>A modern, responsive weather application with real-time data, 5-day forecasts, interactive charts, maps, and PWA support with voice search capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <a href="https://github.com/GangserX/weather-app" class="btn btn-primary" target="_blank">View GitHub Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/todo_webapp.jpg" alt="Todo Web App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/GangserX/todo-app-guide" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Todo Web App</h3>
+                        <p>A comprehensive To-Do List application demonstrating DOM manipulation, event handling, and data persistence with responsive design and real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">DOM Manipulation</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <a href="https://github.com/GangserX/todo-app-guide" class="btn btn-primary" target="_blank">View GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>bishalpvtxd@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>943012431</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Kolkata, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/bishal-pritam-chowdhury-14592630a/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/GangserX" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/GangserX" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bishal Pritam Chowdhury. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

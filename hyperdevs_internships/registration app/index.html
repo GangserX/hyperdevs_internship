@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Welcome Screen (shown when logged in) -->
+    <div id="welcomeScreen" class="hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 text-center">
+                <div class="mb-6">
+                    <i class="fas fa-check-circle text-green-500 text-6xl mb-4"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Welcome Back!</h2>
+                    <p class="text-gray-600 mt-2">You are successfully logged in.</p>
+                </div>
+                <button id="logoutBtn" class="btn btn-danger w-100">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Container (Login/Registration Forms) -->
+    <div id="authContainer" class="container mx-auto px-4 py-8">
+        <div class="max-w-md mx-auto">
+            <!-- Form Toggle Buttons -->
+            <div class="text-center mb-6">
+                <div class="btn-group" role="group">
+                    <button id="loginTab" class="btn btn-outline-primary active-tab">
+                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                    </button>
+                    <button id="signupTab" class="btn btn-outline-primary">
+                        <i class="fas fa-user-plus me-2"></i>Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <!-- Forms Container -->
+            <div class="form-container bg-white rounded-lg shadow-lg p-8">
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                    </h2>
+                    
+                    <!-- Email Field -->
+                    <div class="mb-4">
+                        <label for="loginEmail" class="form-label">
+                            <i class="fas fa-envelope me-2"></i>Email
+                        </label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="mb-4">
+                        <label for="loginPassword" class="form-label">
+                            <i class="fas fa-lock me-2"></i>Password
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+                            <button class="btn btn-outline-secondary password-toggle" type="button" data-target="loginPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                    </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="loginMessage" class="alert d-none" role="alert"></div>
+                </form>
+
+                <!-- Registration Form -->
+                <form id="signupForm" class="auth-form">
+                    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+                        <i class="fas fa-user-plus me-2"></i>Create Account
+                    </h2>
+                    
+                    <!-- Email Field -->
+                    <div class="mb-4">
+                        <label for="signupEmail" class="form-label">
+                            <i class="fas fa-envelope me-2"></i>Email
+                        </label>
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="mb-4">
+                        <label for="signupPassword" class="form-label">
+                            <i class="fas fa-lock me-2"></i>Password
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Create a password" required>
+                            <button class="btn btn-outline-secondary password-toggle" type="button" data-target="signupPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                        <!-- Password Strength Indicator -->
+                        <div class="password-strength mt-2">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <small class="strength-text text-muted">Password strength: <span class="strength-level">Weak</span></small>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="mb-4">
+                        <label for="confirmPassword" class="form-label">
+                            <i class="fas fa-lock me-2"></i>Confirm Password
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                            <button class="btn btn-outline-secondary password-toggle" type="button" data-target="confirmPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success w-100 mb-3">
+                        <i class="fas fa-user-plus me-2"></i>Create Account
+                    </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="signupMessage" class="alert d-none" role="alert"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
